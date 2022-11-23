@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2083B24-29D3-4BD2-9360-DB738FD42707}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MoranControl</RootNamespace>
+    <AssemblyName>MoranControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DLL\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DLL\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="ElContros, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DLL\ElContros.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\TipElisa22.04.01\TipElisa\bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI, Version=3.0.6.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\一体机\HSDebug\HSDebug\bin\Debug\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI.Common, Version=3.0.6.0, Culture=neutral, PublicKeyToken=5a271fb7ba597231, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\一体机\HSDebug\HSDebug\bin\Debug\SunnyUI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="common\common.cs" />
+    <Compile Include="CurrentSoftSetting.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HoleDataSet.cs" />
+    <Compile Include="IPlugin.cs" />
+    <Compile Include="LayoutDeepHolePlate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutDeepHolePlate.designer.cs">
+      <DependentUpon>LayoutDeepHolePlate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutHoleColumn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutHoleColumn.designer.cs">
+      <DependentUpon>LayoutHoleColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutMic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutMic.Designer.cs">
+      <DependentUpon>LayoutMic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutReagent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutReagent.Designer.cs">
+      <DependentUpon>LayoutReagent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutReagent1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutReagent1.Designer.cs">
+      <DependentUpon>LayoutReagent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutQc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutQc.Designer.cs">
+      <DependentUpon>LayoutQc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutReagent2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutReagent2.Designer.cs">
+      <DependentUpon>LayoutReagent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutSample.designer.cs">
+      <DependentUpon>LayoutSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutTip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayoutTip.designer.cs">
+      <DependentUpon>LayoutTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPanelControl.Designer.cs">
+      <DependentUpon>MainPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPanelControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPanelControl4.Designer.cs">
+      <DependentUpon>MainPanelControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoranLanguage.cs" />
+    <Compile Include="MyButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyButtonX.Designer.cs">
+      <DependentUpon>MyButtonX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyLabelX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyLabelX.Designer.cs">
+      <DependentUpon>MyLabelX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyOpaqueLayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NewDatagridview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="numTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlateButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlateGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PlateResultGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="runMicroplate\CKeyValuePair.cs" />
+    <Compile Include="runMicroplate\deletegateDif.cs" />
+    <Compile Include="runMicroplate\DevicesComponentParent.cs" />
+    <Compile Include="runMicroplate\frmInputName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="runMicroplate\frmInputName.Designer.cs">
+      <DependentUpon>frmInputName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="runMicroplate\frmLiquidInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="runMicroplate\frmLiquidInput.Designer.cs">
+      <DependentUpon>frmLiquidInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="runMicroplate\InstrumentLayout.cs" />
+    <Compile Include="runMicroplate\messageDialog.cs" />
+    <Compile Include="runMicroplate\MicroplateRackSeting.cs" />
+    <Compile Include="runMicroplate\MicroplateSeting.cs" />
+    <Compile Include="runMicroplate\Pos.cs" />
+    <Compile Include="runMicroplate\ProMethod.cs" />
+    <Compile Include="runMicroplate\RackSetting.cs" />
+    <Compile Include="runMicroplate\ReagentSetting.cs" />
+    <Compile Include="runMicroplate\RunModel.cs" />
+    <Compile Include="runMicroplate\SerializerHelper.cs" />
+    <Compile Include="runMicroplate\StringT.cs" />
+    <Compile Include="ucReagent2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReagent2.Designer.cs">
+      <DependentUpon>ucReagent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UMicroplateDesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UMicroplateDesign.Designer.cs">
+      <DependentUpon>UMicroplateDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tip.Designer.cs">
+      <DependentUpon>Tip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseRack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="baseRack.Designer.cs">
+      <DependentUpon>baseRack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleRack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SampleRack.Designer.cs">
+      <DependentUpon>SampleRack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="deep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="deep.Designer.cs">
+      <DependentUpon>deep.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LayoutDeepHolePlate.resx">
+      <DependentUpon>LayoutDeepHolePlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutHoleColumn.resx">
+      <DependentUpon>LayoutHoleColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutMic.resx">
+      <DependentUpon>LayoutMic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutReagent.resx">
+      <DependentUpon>LayoutReagent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutReagent1.resx">
+      <DependentUpon>LayoutReagent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutQc.resx">
+      <DependentUpon>LayoutQc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutReagent2.resx">
+      <DependentUpon>LayoutReagent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutSample.resx">
+      <DependentUpon>LayoutSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutTip.resx">
+      <DependentUpon>LayoutTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanelControl.resx">
+      <DependentUpon>MainPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPanelControl4.resx">
+      <DependentUpon>MainPanelControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewDatagridview.resx">
+      <DependentUpon>NewDatagridview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlateResultGrid.resx">
+      <DependentUpon>PlateResultGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="runMicroplate\frmInputName.resx">
+      <DependentUpon>frmInputName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="runMicroplate\frmLiquidInput.resx">
+      <DependentUpon>frmLiquidInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReagent2.resx">
+      <DependentUpon>ucReagent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UMicroplateDesign.resx">
+      <DependentUpon>UMicroplateDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tip.resx">
+      <DependentUpon>Tip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseRack.resx">
+      <DependentUpon>baseRack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleRack.resx">
+      <DependentUpon>SampleRack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deep.resx">
+      <DependentUpon>deep.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="lib\CSkin.dll" />
+    <Content Include="lib\DevComponents.DotNetBar2.dll" />
+    <Content Include="lib\ElContros.dll" />
+    <Content Include="lib\log4net.dll" />
+    <Content Include="lib\SunnyUI.Common.dll" />
+    <Content Include="lib\SunnyUI.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
